@@ -16,7 +16,7 @@ const index = require('./routes/index');
 const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost/apgrab';
 mongoose.connect(mongoUri, (err) => {
   if (err) {
-    console.log('connection error!');
+    console.log('mongodb connection error!');
   }
 });
 
@@ -62,4 +62,5 @@ app.use((err, req, res, next) => {
   res.json(err);
 });
 
-app.listen('3000');
+app.listen('3000', () => {
+  console.log('ap-grab listening on port 3000')});

@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon app",
-    "dev": "nodemon app",
+    "start": "supervisor app",
+    "dev": "supervisor app",
     "production": "node app"
   },
   "dependencies": {
